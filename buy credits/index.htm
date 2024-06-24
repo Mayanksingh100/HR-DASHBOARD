@@ -3,94 +3,224 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pricing Plans</title>
+    <title>UPTOSKILLS Plans</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="UPTOSKILLS logo">
-        </div>
-        <div class="credits">
-            <a href="#">Available Credits</a>
-        </div>
-    </header>
-    <main>
-        <section class="hero">
-            <h1>Recruitment made easy with UPTOSKILLS</h1>
-            <p>Choose from our tailored plans and unlock your full potential to connect with top talent effortlessly.</p>
-            <a href="#">View how credits work</a>
-        </section>
         <nav>
+            <img src="logo.png" alt="UPTOSKILLS Logo" class="logo">
             <ul>
-                <li class="active">Job posting plans</li>
+                <li><a href="#">Select a plan</a></li>
+                <li><a href="#">Checkout</a></li>
             </ul>
         </nav>
-        <section class="plans">
-            <div class="plan">
-                <h2>12 Months</h2>
+    </header>
+
+    <div class="alert-banner">
+        <p>Limited time deal: ₹300 OFF</p>
+        <p>Save additional ₹300 on 1 Month Plan and above with promo code <strong>FIRST60</strong>. Offer ends in 5 days</p>
+    </div>
+
+    <section class="plans-section">
+        <h1>Recruitment made easy with UPTOSKILLS</h1>
+        <p>Choose from our tailored plans and unlock your full potential to connect with top talent effortlessly.</p>
+        <a href="#">View how credits works</a>
+
+        <div class="tabs">
+            <button class="tablink" onclick="openTab(event, 'BundlePlans')">Bundle plans</button>
+            <button class="tablink active" onclick="openTab(event, 'JobPostingPlans')">Job posting plans</button>
+            <button class="tablink" onclick="openTab(event, 'DatabasePlans')">Database plans</button>
+        </div>
+        <div id="Bundleplans" class="tabcontent" style="display: block;">
+            <div class="plan-card">
+                <h3>12 Months</h3>
                 <p>Best fit for larger hiring needs</p>
-                <div class="price">
-                    <span class="discounted-price">₹9990</span>
-                    <span class="original-price">₹12000</span>
-                    <span class="discount">17% OFF</span>
-                </div>
+                <h2>₹9990</h2>
+                <p class="discount">₹12000 <span>17% OFF</span></p>
                 <button>Buy Now</button>
-                <ul class="features">
+                <ul>
                     <li>20 Job credits</li>
                     <li>Valid for 360 days</li>
                     <li>AI driven matching algorithm</li>
                     <li>15+ Advanced filters</li>
-                    <li>Whatsapp & Call based lead</li>
+                    <li>Whatsapp & Call based lead management</li>
                 </ul>
             </div>
-            <div class="plan recommended">
-                <h2>3 Months</h2>
+            <div class="plan-card recommended">
+                <h3>3 Months</h3>
                 <p>Perfect for growing businesses</p>
-                <div class="price">
-                    <span class="discounted-price">₹3190</span>
-                    <span class="original-price">₹3600</span>
-                    <span class="discount">12% OFF</span>
-                </div>
+                <h2>₹3190</h2>
+                <p class="discount">₹3600 <span>12% OFF</span></p>
                 <button>Buy Now</button>
-                <ul class="features">
+                <ul>
                     <li>6 Job credits</li>
                     <li>Valid for 90 days</li>
                     <li>AI driven matching algorithm</li>
                     <li>15+ Advanced filters</li>
-                    <li>Whatsapp & Call based lead</li>
+                    <li>Whatsapp & Call based lead management</li>
                 </ul>
             </div>
-            <div class="plan">
-                <h2>1 Month</h2>
+            <div class="plan-card">
+                <h3>1 Month</h3>
                 <p>Ideal for small teams</p>
-                <div class="price">
-                    <span class="discounted-price">₹1690</span>
-                    <span class="original-price">₹1800</span>
-                    <span class="discount">6% OFF</span>
-                </div>
+                <h2>₹1690</h2>
+                <p class="discount">₹1800 <span>6% OFF</span></p>
                 <button>Buy Now</button>
-                <ul class="features">
+                <ul>
                     <li>3 Job credits</li>
                     <li>Valid for 30 days</li>
                     <li>AI driven matching algorithm</li>
                     <li>15+ Advanced filters</li>
-                    <li>Whatsapp & Call based lead</li>
+                    <li>Whatsapp & Call based lead management</li>
                 </ul>
             </div>
-
-        </section>
-        <section class="contact-help">
-            <div class="help-box">
-                <img src="support.png" alt="Support">
-                <div>
-                    <h3>Have more questions? We're here to help</h3>
-                    <p>Tell us more about your hiring needs so we can help you pick the right solution.</p>
-                </div>
-                <button>Contact Us</button>
+            <div class="plan-card custom">
+                <h3>Custom Solution</h3>
+                <p>Make your own personalised plan</p>
+                <button>Contact Sales</button>
+                <ul>
+                    <li>Dedicated account manager</li>
+                    <li>Valid up to 360 days</li>
+                    <li>Multiple logins & Reports</li>
+                    <li>ATS Integration</li>
+                    <li>Company branding & boosting</li>
+                    <li>Multimedia WhatsApp Invites</li>
+                </ul>
             </div>
-        </section>
-        
-    </main>
+        </div>
+        <div id="JobPostingPlans" class="tabcontent" style="display: block;">
+            <div class="plan-card">
+                <h3>12 Months</h3>
+                <p>Best fit for larger hiring needs</p>
+                <h2>₹9990</h2>
+                <p class="discount">₹12000 <span>17% OFF</span></p>
+                <button>Buy Now</button>
+                <ul>
+                    <li>20 Job credits</li>
+                    <li>Valid for 360 days</li>
+                    <li>AI driven matching algorithm</li>
+                    <li>15+ Advanced filters</li>
+                    <li>Whatsapp & Call based lead management</li>
+                </ul>
+            </div>
+            <div class="plan-card recommended">
+                <h3>3 Months</h3>
+                <p>Perfect for growing businesses</p>
+                <h2>₹3190</h2>
+                <p class="discount">₹3600 <span>12% OFF</span></p>
+                <button>Buy Now</button>
+                <ul>
+                    <li>6 Job credits</li>
+                    <li>Valid for 90 days</li>
+                    <li>AI driven matching algorithm</li>
+                    <li>15+ Advanced filters</li>
+                    <li>Whatsapp & Call based lead management</li>
+                </ul>
+            </div>
+            <div class="plan-card">
+                <h3>1 Month</h3>
+                <p>Ideal for small teams</p>
+                <h2>₹1690</h2>
+                <p class="discount">₹1800 <span>6% OFF</span></p>
+                <button>Buy Now</button>
+                <ul>
+                    <li>3 Job credits</li>
+                    <li>Valid for 30 days</li>
+                    <li>AI driven matching algorithm</li>
+                    <li>15+ Advanced filters</li>
+                    <li>Whatsapp & Call based lead management</li>
+                </ul>
+            </div>
+            <div class="plan-card custom">
+                <h3>Custom Solution</h3>
+                <p>Make your own personalised plan</p>
+                <button>Contact Sales</button>
+                <ul>
+                    <li>Dedicated account manager</li>
+                    <li>Valid up to 360 days</li>
+                    <li>Multiple logins & Reports</li>
+                    <li>ATS Integration</li>
+                    <li>Company branding & boosting</li>
+                    <li>Multimedia WhatsApp Invites</li>
+                </ul>
+            </div>
+        </div>
+        <div id="DatabasePlans" class="tabcontent" style="display: block;">
+            <div class="plan-card">
+                <h3>12 Months</h3>
+                <p>Best fit for larger hiring needs</p>
+                <h2>₹9990</h2>
+                <p class="discount">₹21000 <span>53% OFF</span></p>
+                <button>Buy Now</button>
+                <ul>
+                    <li>1500 Data base credits</li>
+                    <li>Valid for 30 days</li>
+                    <li>AI-assisted Search</li>
+                    <li>Area wise filter</li>  </ul>
+            </div>
+            <div class="plan-card recommended">
+                <h3>3 Months</h3>
+                <p>Perfect for growing businesses</p>
+                <h2>₹3190</h2>
+                <p class="discount">₹6300 <span>50% OFF</span></p>
+                <button>Buy Now</button>
+                <ul>
+                    <li>450 Data base credits</li>
+                    <li>Valid for 30 days</li>
+                    <li>AI-assisted Search</li>
+                    <li>Area wise filter</li>
+                    
+                </ul>
+            </div>
+            <div class="plan-card">
+                <h3>1 Month</h3>
+                <p>Ideal for small teams</p>
+                <h2>₹1690</h2>
+                <p class="discount">₹2800 <span>40% OFF</span></p>
+                <button>Buy Now</button>
+                <ul>
+                    <li>200 Data base credits</li>
+                    <li>Valid for 30 days</li>
+                    <li>AI-assisted Search</li>
+                    <li>Area wise filter</li>
+                    
+                </ul>
+            </div>
+            <div class="plan-card custom">
+                <h3>Custom Solution</h3>
+                <p>Make your own personalised plan</p>
+                <button>Contact Sales</button>
+                <ul>
+                    <li>Dedicated account manager</li>
+                    <li>Valid up to 360 days</li>
+                    <li>Multiple logins & Reports</li>
+                    <li>ATS Integration</li>
+                    <li>Company branding & boosting</li>
+                    <li>Multimedia WhatsApp Invites</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <p class="note">*All plans prices are shown excluding applicable taxes.</p>
+        </div>
+    
+    </section>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+    </script>
 </body>
 </html>
