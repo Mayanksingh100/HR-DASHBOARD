@@ -185,13 +185,13 @@ nav ul li.active {
 }
 
 .plan-card.custom {
-    background-color: #d9cdcd;
+    background-color: #ddd;
     border: 1px solid #e0e0e0; 
     border-radius: 8px; 
     padding: 20px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px; 
-    width: 300px; 
+    width: 180px; 
     text-align: left; 
 }
 
@@ -270,4 +270,30 @@ nav ul li.active {
 .click2-text {
     margin: 10px 0 0 0;
     font-size: 16px; 
+}
+
+.banner-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden; 
+    white-space: nowrap; 
+}
+
+
+.banner-image {
+    display: inline-block;
+    width: 100px; 
+    height: auto; 
+    flex-shrink: 0;
+    margin-right: 20px;
+    animation: moveBanner 10s linear infinite; 
+
+}
+@keyframes moveBanner {
+    0% {
+        transform: translateX(100%); 
+    }
+    100% {
+        transform: translateX(-100%); 
+    }
 }
