@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #ffffff; 
 }
-
 header {
     display: flex;
     justify-content: space-between;
@@ -16,33 +16,33 @@ header {
 header .logo img {
     height: 40px;
 }
-
-header .credits a {
-    text-decoration: none;
-    color: #5f6468;
-    text-align: right;
-}
 .close-btn {
     margin-left: 15px;
-    color: white;
     font-weight: bold;
     float: right;
     font-size: 22px;
     line-height: 20px;
-    
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
 }
 
 .close-btn:hover {
     color: #000;
 }
+
 #alert-banner {
     background-color: #f0f4ff;
-    padding: 15px; 
+    padding: 10px; 
     text-align: center; 
     border: 1px solid #dce1ff; 
     margin: 20px auto;
     max-width: 600px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+
 }
 
 #alert-banner p {
@@ -54,8 +54,6 @@ header .credits a {
     font-size: 18px;
     color: #1a73e8; 
 }
-
-   
 
 main {
     padding: 20px;
@@ -185,16 +183,18 @@ nav ul li.active {
 }
 
 .plan-card.custom {
-    background-color: #ddd;
-    border: 1px solid #e0e0e0; 
+    background-color: #f1efefc3;
+    border: 1px solid #fffdfdec; 
     border-radius: 8px; 
     padding: 20px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px; 
-    width: 180px; 
+    width: 200px; 
     text-align: left; 
 }
-
+.plan-card.custom button:hover {
+    background: #161e18;
+}
 .plan-card.custom h3 {
     margin-top: 0; 
 }
@@ -222,8 +222,9 @@ nav ul li.active {
     width: 80%;
     justify-content: space-between;
 }
+
 .note {
-     text-align: left;
+    text-align: left;
 }
 
 .contact-help .help-box img {
@@ -239,6 +240,7 @@ nav ul li.active {
     margin: 0;
     color: #555;
 }
+
 .usage-matrix-card {
     display: flex;
     flex-direction: column;
@@ -272,13 +274,45 @@ nav ul li.active {
     font-size: 16px; 
 }
 
+.flex-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+}
+
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.flex-item svg {
+    margin-bottom: 10px;
+}
+
+.flex-item .heading2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.flex-item .body2 {
+    font-size: 1em;
+    color: #666;
+}
+
 .banner-container {
     position: relative;
     width: 100%;
     overflow: hidden; 
     white-space: nowrap; 
 }
-
 
 .banner-image {
     display: inline-block;
@@ -287,8 +321,8 @@ nav ul li.active {
     flex-shrink: 0;
     margin-right: 20px;
     animation: moveBanner 10s linear infinite; 
-
 }
+
 @keyframes moveBanner {
     0% {
         transform: translateX(100%); 
@@ -296,4 +330,67 @@ nav ul li.active {
     100% {
         transform: translateX(-100%); 
     }
+}
+
+.recommenders {
+    background-color: #005D69;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.recommendation-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: white;
+    color: #005D69;
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.logo {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.testimonial {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.author {
+    font-weight: bold;
+}
+
+.designation {
+    font-size: 12px;
+    color: #888;
+}
+
+.faq-section {
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
 }
