@@ -11,7 +11,7 @@
         <div class="logo">
             <img src="logo.png" alt="UPTOSKILLS logo">
         </div>
-        <span class="close-btn" onclick="closeWindow()">&times;</span>
+       
     </header>
     <section>
     <div id="alert-banner" class="alert">
@@ -350,6 +350,50 @@
                     </div>
                 </div>
             </section>
+            <div class="faq-container">
+                <p><h1>Frequently Asked Questions</h1></p>
+                <div class="faq">
+                    <div class="question">Why Should I use UPTOSKILLS over others ?</div>
+                    <div class="answer">
+                        <ol>
+                            <li>UPTOSKILLS has the largest pool of active candidates; it took us just 5 years to reach a 5 cr+ candidate base</li>
+                            <li>UPTOSKILLS makes the hiring experience very personalised for you. - you can opt to receive callbacks from relevant candidate, WhatsApp all the candidates in bulk to filter at scale or user our Web Dashboard to shortlist or reject applications.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">What happens if I don't receive enough candidates?</div>
+                    <div class="answer">
+                        <ul>
+                            <li>You can always chat with Apna Support team for any help regarding your job posting. On a single click, our Support team will be available to guide you on ways to increase the application rate and close your hiring faster.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="question">In which cities I hire via UPTOSKILLS ?</div>
+                    <div class="answer">UPTOSKILLS is now LIVE in 800+ cities across India. You can easily find candidates from any city just by posting the job or searching candidates in apna Database for that city.</div>
+                </div>
+                <div class="faq">
+                    <div class="question">Is job validity different than credits validity?</div>
+                    <div class="answer">yes, job validity is always fixed to 15 days from the date of posting. While, Credits validity is based on the plan you have purchased. You can check the same in Credits & History tab</div>
+                </div>
+                <div class="faq">
+                    <div class="question">I want to hire more than 10 people, do you have any bulk-hiring plans?</div>
+                    <div class="answer">Yes, we offer bulk-hiring plans personalised for your needs at discounted prices. You can request a callback from our Sales team by clicking on Contact Sales button above.</div>
+                </div>
+            </div>
+            
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+            $(document).ready(function() {
+                $('.question').click(function() {
+                    var $answer = $(this).next('.answer');
+                    $('.answer').not($answer).slideUp(300).removeClass('open'); 
+                    $answer.stop(true, true).slideToggle(300).toggleClass('open'); 
+                });
+            });
+            </script>
+            
             <script>
                 function openTab(evt, tabName) {
                     var i, tabcontent, tablinks;
@@ -365,7 +409,8 @@
                     evt.currentTarget.className += " active";
                 }
                 document.getElementById("JobPostingPlans").style.display = "block"; // Open Job Posting Plans by default
-            </script>
+
+          </script>
     </main>
 </body>
 </html>
