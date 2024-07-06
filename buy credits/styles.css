@@ -16,6 +16,25 @@ header {
 header .logo img {
     height: 40px;
 }
+.close-btn {
+    margin-left: 15px;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.close-btn:hover {
+    color: #000;
+}
+
 #alert-banner {
     background-color: #f0f4ff;
     padding: 10px; 
@@ -75,74 +94,91 @@ nav ul li.active {
     border-bottom: 2px solid #007BFF;
     color: #007BFF;
 }
-
 .plans {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.plan {
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.plan, .plan-card.custom {
+    border: 1px solid #ccc;
+    border-radius: 10px;
     padding: 20px;
     margin: 10px;
     width: 22%;
     text-align: center;
     background: #f9f9f9;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.plan h2 {
+.plan h2, .plan-card.custom h3 {
     margin: 10px 0;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
-.plan .price {
+.plan .price, .plan-card.custom .price {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 15px 0;
 }
 
-.plan .discounted-price {
+.plan .discounted-price, .plan-card.custom .discounted-price {
     font-size: 24px;
     font-weight: bold;
     color: #28a745;
     margin-right: 10px;
 }
 
-.plan .original-price {
+.plan .original-price, .plan-card.custom .original-price {
     text-decoration: line-through;
     color: #888;
     margin-right: 10px;
 }
 
-.plan .discount {
+.plan .discount, .plan-card.custom .discount {
     color: #dc3545;
 }
 
-.plan button {
+.plan button, .plan-card.custom button {
     background: #28a745;
     color: white;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    margin: 20px 0;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
-.plan button:hover {
+.plan button:hover, .plan-card.custom button:hover {
     background: #218838;
 }
 
-.plan .features {
+.plan .features, .plan-card.custom ol {
     list-style: none;
     padding: 0;
     margin: 15px 0;
     text-align: left;
+    margin: 0 auto;
+    display: inline-block;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
-.plan .features li {
+.plan .features li, .plan-card.custom ol li {
     margin: 10px 0;
     color: #555;
+    font-size: 14px;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .plan.recommended {
@@ -164,36 +200,87 @@ nav ul li.active {
 }
 
 .plan-card.custom {
-    background-color: #f1efefc3;
-    border: 1px solid #fffdfdec; 
-    border-radius: 8px; 
-    padding: 20px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px; 
-    width: 200px; 
-    text-align: left; 
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-bottom: 20px;
+    width: 22%;
+    display: inline-block;
+    vertical-align: top;
+    word-wrap: break-word;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-.plan-card.custom button:hover {
-    background: #161e18;
-}
+
 .plan-card.custom h3 {
-    margin-top: 0; 
+    font-size: 24px;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
 .plan-card.custom p {
-    margin: 10px 0; 
+    font-size: 14px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    white-space: normal;
 }
 
-.plan-card.custom ul {
-    list-style-type: none;
-    padding: 0; 
+.plan-card.custom button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 20px 0;
+    word-wrap: break-word;
+    white-space: normal;
 }
+
+.plan-card.custom button:hover {
+    background-color: #0056b3;
+}
+
+.plan-card.custom ol {
+    list-style-type: decimal;
+    padding: 0;
+    text-align: left;
+    margin: 0 auto;
+    display: inline-block;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.plan-card.custom ol li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+@media (max-width: 1200px) {
+    .plan, .plan-card.custom {
+        width: 45%;
+    }
+}
+
+@media (max-width: 768px) {
+    .plan, .plan-card.custom {
+        width: 100%;
+    }
+}
+
 .contact-help {
     display: flex;
     justify-content: center;
     margin: 20px 0;
 }
-
 .contact-help .help-box {
     display: flex;
     align-items: center;
