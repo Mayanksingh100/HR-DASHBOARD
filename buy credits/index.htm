@@ -382,6 +382,7 @@
                     <div class="answer">Yes, we offer bulk-hiring plans personalised for your needs at discounted prices. You can request a callback from our Sales team by clicking on Contact Sales button above.</div>
                 </div>
             </div>
+            </main>
             
             <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
             <script>
@@ -392,9 +393,6 @@
                     $answer.stop(true, true).slideToggle(300).toggleClass('open'); 
                 });
             });
-            </script>
-            
-            <script>
                 function openTab(evt, tabName) {
                     var i, tabcontent, tablinks;
                     tabcontent = document.getElementsByClassName("tabcontent");
@@ -409,8 +407,9 @@
                     evt.currentTarget.className += " active";
                 }
                 document.getElementById("JobPostingPlans").style.display = "block"; // Open Job Posting Plans by default
-
+                document.getElementsByClassName('tablink')[1].click();
           </script>
-    </main>
+    
 </body>
 </html>
+
