@@ -11,7 +11,7 @@
         <div class="logo">
             <img src="logo.png" alt="UPTOSKILLS logo">
         </div>
-       
+        <span class="close-btn" onclick="closeWindow()">&times;</span>
     </header>
     <section>
     <div id="alert-banner" class="alert">
@@ -408,8 +408,10 @@
                 }
                 document.getElementById("JobPostingPlans").style.display = "block"; // Open Job Posting Plans by default
                 document.getElementsByClassName('tablink')[1].click();
-          </script>
+                function closeWindow() {
+               window.location.href = 'logo.png'; // Change 'index.html' to your index page's actual path
+               }
+         </script>
     
 </body>
 </html>
-
